@@ -1,0 +1,16 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "Primeira aplicação em AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -a localhost -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "nodemon": "^1.18.10"
+  }
+}
