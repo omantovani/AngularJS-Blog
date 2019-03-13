@@ -15,35 +15,13 @@
 
     <!-- modulo principal -->
     <script src="/js/app.js"></script>
+
+    <!-- components -->
+    <script src="/js/components/posts/posts.component.js"></script>
 </head>
 
 <body ng-app="blogApp">
-    <div ng-controller="postsController" class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center">BlogApp</h1>
-                <button ng-click="addPost()">Adicionar novo post</button>
-                <br><br>
-                <ul>
-                    <li ng-repeat="post in posts ">
-                        {{post.title}}
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div ng-controller="calculadoraControllers" class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center">Somar Valores</h1>
-                <input type="number" placeholder="Insira o 1 número" ng-model="primeiroNumero">
-                <input type="number" placeholder="Insira o 2 número" ng-model="segundoNumero">
-                <button ng-click="somarValores()">Somar</button>
-                <h5>O resultado da soma é: {{total}}</h5>
-            </div>
-        </div>
-    </div>
+    <posts></posts>
 </body>
 
 </html>
