@@ -1,14 +1,12 @@
-angular.module('blogApp').factory('postService', [function() {
+angular.module('blogApp').factory('postService', ['$http', function($http) {
   return {
     listAll: function() {
-      return [{
-          title: "Foo"
-        },
-        {
-          title: "Bar"
-        }
-      ];
+      return new Promise((resolve, reject) => {
+        $http.get('http://localhost:3000/api/posts')
+          .then(response => resolve(response.data))
+          .catch(error => reject(error))
+      });
     },
-    save: function() {}
+    save: function(post) {}
   }
 }]);

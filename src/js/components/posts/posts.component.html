@@ -2,9 +2,12 @@
     <div class="row">
         <div class="col">
             <h1 class="text-center">BlogApp</h1>
+            <hr>
             <ul>
-                <li ng-repeat="post in $ctrl.posts ">
-                    {{post.title}}
+                <li ng-repeat="post in $ctrl.posts" style="margin: 0 0 24px;">
+                    <b>Título:</b> {{post.title}} <br/>
+                    <b>Autor:</b> {{post.author}} <br/>
+                    <b>Likes:</b> {{post.likes ? post.likes : 0}}
                 </li>
             </ul>
         </div>
