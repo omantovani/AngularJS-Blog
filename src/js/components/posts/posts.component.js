@@ -1,16 +1,10 @@
 angular.module('blogApp').component('posts', {
   templateUrl: 'js/components/posts/posts.component.html',
-  controller: [function() {
+  controller: ['postService', function(postService) {
     let ctrl = this;
 
     ctrl.$onInit = function() {
-      ctrl.posts = [{
-          title: "Foo"
-        },
-        {
-          title: "Bar"
-        }
-      ]
+      ctrl.posts = postService.listAll();
     }
   }]
-})
+});
