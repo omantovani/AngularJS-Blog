@@ -1,15 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="text-center">BlogApp</h1>
-            <hr>
-            <ul>
-                <li ng-repeat="post in $ctrl.posts" style="margin: 0 0 24px;">
-                    <b>Título:</b> {{post.title}} <br/>
-                    <b>Autor:</b> {{post.author}} <br/>
-                    <b>Likes:</b> {{post.likes ? post.likes : 0}}
-                </li>
-            </ul>
+            <h5>Post List</h5>
+        </div>
+        <div class="col">
+            <a href="#!/new" class="float-right">
+                <p>New Post</p>
+            </a>
         </div>
     </div>
 </div>
+<hr>
+<ul>
+    <li ng-repeat="post in $ctrl.posts" style="margin: 0 0 24px;">
+        <b>Título:</b> {{post.title}} <br/>
+    </li>
+</ul>

@@ -1,8 +1,8 @@
-angular.module('blogApp').factory('postService', ['$http', function($http) {
+angular.module('blogApp').factory('postService', ['$http', 'endpontApi', function($http, endpontApi) {
   return {
     listAll: function() {
       return new Promise((resolve, reject) => {
-        $http.get('http://localhost:3000/api/posts')
+        $http.get(endpontApi + '/posts')
           .then(response => resolve(response.data))
           .catch(error => reject(error))
       });

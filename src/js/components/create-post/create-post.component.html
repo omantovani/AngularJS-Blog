@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Create a new post</h5>
+        </div>
+        <div class="col">
+            <a href="#!/posts" class="float-right">
+                <p>&laquo back</p>
+            </a>
+        </div>
+    </div>
+</div>
+<hr>
+<form action="">
+    <!-- titulo -->
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" placeholder="Enter the title of the post" ng-model="$ctrl.post.title">
+    </div>
+
+    <!-- autor -->
+    <div class="form-group">
+        <label for="">Author</label>
+        <select name="" id="" class="form-control" ng-model="$ctrl.post.authorId">
+            <option value="" disabled selected>Choose the author</option>
+
+            <option ng-repeat="author in $ctrl.authors" value="{{author.id}}">
+                {{author.firstName}} {{author.lastName}}
+            </option>
+        </select>
+    </div>
+
+    <!-- texto -->
+    <div class="form-group">
+        <label for="">Text</label>
+        <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Write your post..." ng-model="$ctrl.post.text"></textarea>
+    </div>
+
+    <!-- botões -->
+    <button class="btn btn-outline-dark" ng-click="$ctrl.save()">Save</button>
+</form>
