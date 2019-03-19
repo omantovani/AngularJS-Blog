@@ -11,8 +11,21 @@
     </div>
 </div>
 <hr>
-<ul>
-    <li ng-repeat="post in $ctrl.posts" style="margin: 0 0 24px;">
-        <b>Título:</b> {{post.title}} <br/>
-    </li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview" ng-repeat="post in $ctrl.posts">
+                <a ng-href="#!/view?postId={{post.id}}">
+                    <h5 style="margin: 0;">
+                        {{post.title}}
+                    </h5>
+                </a>
+
+                <p style="font-size: 12px;">Posted by
+                    <a href="#">Start Bootstrap</a> on September 24, 2019
+                </p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

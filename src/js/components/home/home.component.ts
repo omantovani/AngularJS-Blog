@@ -1,4 +1,4 @@
 angular.module('blogApp').component('home', {
-  templateUrl: 'js/components/home/home.component.html',
+  templateUrl: require('./home.component.html'),
   controller: [function() {}]
 });

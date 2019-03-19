@@ -1,5 +1,5 @@
 angular.module('blogApp').component('posts', {
-  templateUrl: 'js/components/posts/posts.component.html',
+  templateUrl: require('./posts.component.html'),
   controller: ['postService', '$scope', function(postService, $scope) {
     let ctrl = this;
 
