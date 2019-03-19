@@ -14,6 +14,7 @@ angular.module('blogApp', ['ngRoute']).config(['$routeProvider', function($route
       .when(`/view`, {
         template: '<view-post post-id="{{$resolve.postId}}"></view-post>',
         resolve: {
+          
           postId: [
             '$location',
             function($location) {

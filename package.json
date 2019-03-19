@@ -4,8 +4,8 @@
   "description": "Primeira aplicação em AngularJS",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack",
-    "start": "http-server ./dist -a localhost -p 8000 -c-1",
+    "start": "npx webpack-dev-server",
+    "_start": "http-server ./dist -a localhost -p 8000 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
