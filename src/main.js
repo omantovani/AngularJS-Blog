@@ -4,8 +4,12 @@ require('angular');
 // angular-route
 require('angular-route');
 
+// require
+require('bson-objectid');
+require('angular-file-upload');
+
 // index.html
-require('./index.html')
+require('./index.html');
 
 // module app
 require('./js/app');

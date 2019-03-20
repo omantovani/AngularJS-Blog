@@ -1,6 +1,6 @@
 declare var angular;
 
-angular.module('blogApp', ['ngRoute']).config(['$routeProvider', function($routeProvider) {
+angular.module('blogApp', ['ngRoute', 'angularFileUpload']).config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when(`/home`, {
         template: `<home></home>`

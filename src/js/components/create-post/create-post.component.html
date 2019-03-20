@@ -18,16 +18,27 @@
         <input type="text" class="form-control" placeholder="Enter the title of the post" ng-model="$ctrl.post.title">
     </div>
 
-    <!-- autor -->
-    <div class="form-group">
-        <label for="">Author</label>
-        <select name="" id="" class="form-control" ng-model="$ctrl.post.authorId">
-            <option value="" disabled selected>Choose the author</option>
+    <div class="row">
+        <div class="col">
+            <!-- autor -->
+            <div class="form-group">
+                <label for="">Author</label>
+                <select name="" id="" class="form-control" ng-model="$ctrl.post.authorId">
+                    <option value="" disabled selected>Choose the author</option>
 
-            <option ng-repeat="author in $ctrl.authors" value="{{author.id}}">
-                {{author.firstName}} {{author.lastName}}
-            </option>
-        </select>
+                    <option ng-repeat="author in $ctrl.authors" value="{{author.id}}">
+                        {{author.firstName}} {{author.lastName}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col">
+            <!-- imagem -->
+            <div class="form-group">
+                <label for="">Photo</label>
+                <input type="file" class="form-control" nv-file-select uploader="$ctrl.uploader">
+            </div>
+        </div>
     </div>
 
     <!-- texto -->

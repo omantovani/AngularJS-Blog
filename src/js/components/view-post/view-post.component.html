@@ -14,10 +14,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-            <p>{{$ctrl.post.text}}</p>
+            <br/>
             <p style="font-size: 12px;">Posted by:
-                <a href="#">{{$ctrl.post.authorId}}</a> on September 24, 2019
+                <strong>{{$ctrl.post.author.firstName}} {{$ctrl.post.author.lastName}}</strong>
+                on <strong>{{$ctrl.post.created}}</strong>
             </p>
+            <hr>
+            <img src="{{$ctrl.post.photoUrl}}" class="img-fluid">
+            <p style="margin-top: 20px">{{$ctrl.post.text}}</p>
         </div>
     </div>
 </div>
